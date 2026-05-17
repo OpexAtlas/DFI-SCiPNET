@@ -1,0 +1,15 @@
+{
+  "name": "DFI SCiPNET",
+  "short_name": "DFI",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0d0505",
+  "theme_color": "#0d0505",
+  "icons": [
+    {
+      "src": "https://media.base44.com/images/public/user_6a07b1585351552d3ee8aeb7/9989b916f_LgoDFI.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
