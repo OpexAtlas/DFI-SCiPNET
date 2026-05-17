@@ -58,4 +58,5 @@ Le projet est configuré pour les navigateurs modernes, en particulier Chrome et
 ## Notes GitHub
 
 - `.gitignore` exclut déjà `node_modules`, `dist`, et les fichiers `.env`
+- Le build Vite est configuré avec `base: './'` pour fonctionner également sur GitHub Pages ou un sous-dossier de site.
 - Ajoutez vos secrets dans `.env.local` et ne les commitez pas
