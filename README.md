@@ -39,7 +39,10 @@ Les variables suivantes sont attendues par le projet :
 VITE_BASE44_APP_ID=
 VITE_BASE44_APP_BASE_URL=
 VITE_BASE44_FUNCTIONS_VERSION=
+VITE_BASE44_SERVER_URL=https://base44.app
 ```
+
+`VITE_BASE44_SERVER_URL` est optionnel : si vous ne le définissez pas, le projet utilise `https://base44.app` par défaut.
 
 > Le projet utilise le SDK `@base44/sdk` pour l’authentification et les accès aux entités. Sans ces variables et sans backend Base44 valide, l’application démarre, mais certaines fonctionnalités peuvent ne pas fonctionner correctement.
 
