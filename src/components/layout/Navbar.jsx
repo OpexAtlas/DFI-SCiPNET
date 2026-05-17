@@ -41,7 +41,7 @@ export default function Navbar() {
   const isCommandementActive = commandementPaths.includes(location.pathname);
 
   const NAV_LEFT = [
-    { path: '/', label: 'ACCUEIL' },
+    { path: '/accueil', label: 'ACCUEIL' },
     { path: '/presentation', label: 'PRÉSENTATION' },
     { path: '/hierarchie', label: 'HIÉRARCHIE' },
     { path: '/recrutement', label: 'RECRUTEMENT' },
@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
+          <Link to="/accueil" className="flex items-center gap-3 flex-shrink-0">
             <img src={LOGO_URL} alt="DFI Logo" className="h-10 w-10 rounded-full" />
             <div className="hidden sm:block">
               <p className="font-heading text-accent text-sm tracking-[0.2em] uppercase leading-none">Forces d'Intervention</p>
