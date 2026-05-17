@@ -1,0 +1,47 @@
+name: Build and deploy docs
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Copy build to docs
+        run: |
+          rm -rf docs
+          mkdir docs
+          cp -R dist/. docs/
+
+      - name: Commit and push docs build
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- docs; then
+            git add docs
+            git commit -m "chore: update docs build [skip ci]"
+            git push origin main
+          else
+            echo "No changes in docs."
+          fi

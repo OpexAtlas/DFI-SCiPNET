@@ -59,4 +59,5 @@ Le projet est configuré pour les navigateurs modernes, en particulier Chrome et
 
 - `.gitignore` exclut déjà `node_modules`, `dist`, et les fichiers `.env`
 - Le build Vite est configuré avec `base: './'` pour fonctionner également sur GitHub Pages ou un sous-dossier de site.
+- Un workflow GitHub Actions est ajouté dans `.github/workflows/deploy-docs.yml` pour reconstruire et mettre à jour `docs/` automatiquement à chaque push sur `main`.
 - Ajoutez vos secrets dans `.env.local` et ne les commitez pas
