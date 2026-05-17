@@ -65,11 +65,13 @@ const AuthenticatedApp = () => {
 };
 
 function App() {
+  const basename = import.meta.env.PROD ? '/DFI-SCiPNET' : undefined;
+
   return (
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <DFIAuthProvider>
-          <Router>
+          <Router basename={basename}>
             <AuthenticatedApp />
           </Router>
           <Toaster />
